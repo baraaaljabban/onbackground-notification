@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notification_background/local_data_source.dart';
+import 'package:notification_background/noti_table.dart';
+import 'dependencies.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -8,9 +11,12 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  List<NotificationMessageTable> allNotifications = [];
   @override
   void initState() {
     super.initState();
+    var result = sl.get<LocalDB>().allNotifications();
+    allNotifications.addAll(result);
   }
 
   @override

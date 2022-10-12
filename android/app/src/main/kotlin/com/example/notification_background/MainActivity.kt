@@ -1,4 +1,4 @@
-package com.example.notification_background
+package com.baraa.notification_background
 
 import io.flutter.embedding.android.FlutterActivity
 
