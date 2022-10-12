@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "890769390633",
+    "project_id": "notification-3a76e",
+    "storage_bucket": "notification-3a76e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890769390633:android:b9c92b0837ce401eee7038",
+        "android_client_info": {
+          "package_name": "com.baraa.notification_background"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890769390633-ngc2ak7b2vis76l8lparpjsqmdtrr3e1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWCex5NZsVqrTzko9K9asHTUXQI8AlIZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "890769390633-ngc2ak7b2vis76l8lparpjsqmdtrr3e1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
