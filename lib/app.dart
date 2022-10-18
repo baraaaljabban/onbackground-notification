@@ -1,3 +1,4 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:notification_background/local_data_source.dart';
 import 'package:notification_background/noti_table.dart';
@@ -17,6 +18,11 @@ class _AppState extends State<App> {
     super.initState();
     var result = sl.get<LocalDB>().allNotifications();
     allNotifications.addAll(result);
+    print('noti count ${allNotifications.length}');
+    FirebaseMessaging.instance.getToken().then((value) {
+      String? token = value;
+      print('fcm $token');
+    });
   }
 
   @override

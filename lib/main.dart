@@ -24,6 +24,7 @@ void main() async {
   await slInit();
   requestNotificationPermission();
   FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
+  FirebaseMessaging.onMessage.listen(onBackgroundMessage);
 
   await runZonedGuarded<Future<void>>(
     () async {
