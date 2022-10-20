@@ -36,17 +36,18 @@ void main() async {
 
 @pragma('vm:entry-point')
 Future<void> onBackgroundMessage(RemoteMessage message) async {
+  print(message.toString());
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  late LocalDB _service;
+  late LocalDB service;
   try {
-    _service = sl<LocalDB>();
+    service = sl<LocalDB>();
   } catch (e) {
     await sl.reset();
     await slInit();
-    _service = sl<LocalDB>();
+    service = sl<LocalDB>();
   }
-  _service.saveNewNotificationMessage(message: message);
+  service.saveNewNotificationMessage(message: message);
 }
 
 Future<void> _reportError(

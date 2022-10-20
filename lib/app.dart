@@ -29,7 +29,18 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Container(),
+        body: Container(
+          child: ListView.builder(
+            itemCount: allNotifications.length,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: EdgeInsets.all(4),
+                color: Colors.amber,
+                child: Text(allNotifications[index].message),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
